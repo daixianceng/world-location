@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Word Location Selector</title>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/LocList.js"></script>
+<style type="text/css">
+#container {
+    width:960px;
+	margin:0 auto;
+}
+h1 {
+	text-align:center;
+}
+.main {
+	padding:20px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+    <h1>Word Location Selector</h1>
+    <div class="main">
+        <form action="">
+            <select id="country" name="country">
+				<option value="1">中国</option>
+				<option value="3280">阿尔巴尼亚</option>
+				<option value="3293">阿尔及利亚</option>
+				<option value="3342">阿富汗</option>
+				<option value="3347">阿根廷</option>
+				<option value="3382">阿拉伯联合酋长国</option>
+				<option value="3387">阿鲁巴</option>
+				<option value="3388">阿曼</option>
+				<option value="3397">阿塞拜疆</option>
+				<option value="3412">阿森松岛</option>
+				<option value="3413">埃及</option>
+				<option value="3419">埃塞俄比亚</option>
+				<option value="3431">爱尔兰</option>
+				<option value="3458">爱沙尼亚</option>
+				<option value="3474">安道尔</option>
+				<option value="3482">安哥拉</option>
+				<option value="3501">安圭拉</option>
+				<option value="3502">安提瓜岛和巴布达</option>
+				<option value="3503">澳大利亚</option>
+				<option value="3545">奥地利</option>
+				<option value="3555">奥兰群岛</option>
+				<option value="3556">巴巴多斯岛</option>
+				<option value="3557">巴布亚新几内亚</option>
+				<option value="3577">巴哈马</option>
+				<option value="3578">巴基斯坦</option>
+				<option value="3588">巴拉圭</option>
+				<option value="3607">巴勒斯坦</option>
+				<option value="3610">巴林</option>
+				<option value="3620">巴拿马</option>
+				<option value="3621">巴西</option>
+				<option value="3649">白俄罗斯</option>
+				<option value="3656">百慕大</option>
+				<option value="3657">保加利亚</option>
+				<option value="3667">北马里亚纳群岛</option>
+				<option value="3668">贝宁</option>
+				<option value="3682">比利时</option>
+				<option value="3694">冰岛</option>
+				<option value="3695">波多黎各</option>
+				<option value="3696">波兰</option>
+				<option value="3760">玻利维亚</option>
+				<option value="3773">波斯尼亚和黑塞哥维那</option>
+				<option value="3785">博茨瓦纳</option>
+				<option value="3786">伯利兹</option>
+				<option value="3793">不丹</option>
+				<option value="3794">布基纳法索</option>
+				<option value="3840">布隆迪</option>
+				<option value="3858">布韦岛</option>
+				<option value="3859">朝鲜</option>
+				<option value="3872">丹麦</option>
+				<option value="3887">德国</option>
+				<option value="3930">东帝汶</option>
+				<option value="3944">多哥</option>
+				<option value="3950">多米尼加</option>
+				<option value="3951">多米尼加共和国</option>
+				<option value="3952">俄罗斯</option>
+				<option value="4038">厄瓜多尔</option>
+				<option value="4060">厄立特里亚</option>
+				<option value="4067">法国</option>
+				<option value="4091">法罗群岛</option>
+				<option value="4092">法属波利尼西亚</option>
+				<option value="4093">法属圭亚那</option>
+				<option value="4094">法属南部领地</option>
+				<option value="4095">梵蒂冈</option>
+				<option value="4096">菲律宾</option>
+				<option value="4101">斐济</option>
+				<option value="4102">芬兰</option>
+				<option value="4123">佛得角</option>
+				<option value="4144">弗兰克群岛</option>
+				<option value="4145">冈比亚</option>
+				<option value="4146">刚果</option>
+				<option value="4147">刚果民主共和国</option>
+				<option value="4148">哥伦比亚</option>
+				<option value="4182">哥斯达黎加</option>
+				<option value="4190">格恩西岛</option>
+				<option value="4191">格林纳达</option>
+				<option value="4192">格陵兰</option>
+				<option value="4193">古巴</option>
+				<option value="4211">瓜德罗普</option>
+				<option value="4212">关岛</option>
+				<option value="4213">圭亚那</option>
+				<option value="4224">哈萨克斯坦</option>
+				<option value="4262">海地</option>
+				<option value="4263">韩国</option>
+				<option value="4439">荷兰</option>
+				<option value="4468">荷属安地列斯</option>
+				<option value="4469">赫德和麦克唐纳群岛</option>
+				<option value="4470">洪都拉斯</option>
+				<option value="4490">基里巴斯</option>
+				<option value="4494">吉布提</option>
+				<option value="4499">吉尔吉斯斯坦</option>
+				<option value="4516">几内亚</option>
+				<option value="4525">几内亚比绍</option>
+				<option value="4526">加拿大</option>
+				<option value="4561">加纳</option>
+				<option value="4573">加蓬</option>
+				<option value="4583">柬埔寨</option>
+				<option value="4608">捷克共和国</option>
+				<option value="4622">津巴布韦</option>
+				<option value="4633">喀麦隆</option>
+				<option value="4644">卡塔尔</option>
+				<option value="4654">开曼群岛</option>
+				<option value="4655">科科斯群岛</option>
+				<option value="4656">科摩罗</option>
+				<option value="4657">科特迪瓦</option>
+				<option value="4677">科威特</option>
+				<option value="4678">克罗地亚</option>
+				<option value="4700">肯尼亚</option>
+				<option value="4749">库克群岛</option>
+				<option value="4750">拉脱维亚</option>
+				<option value="4777">莱索托</option>
+				<option value="4788">老挝</option>
+				<option value="4806">黎巴嫩</option>
+				<option value="4813">利比里亚</option>
+				<option value="4831">利比亚</option>
+				<option value="4832">立陶宛</option>
+				<option value="4844">列支敦士登</option>
+				<option value="4845">留尼旺岛</option>
+				<option value="4846">卢森堡</option>
+				<option value="4850">卢旺达</option>
+				<option value="4867">罗马尼亚</option>
+				<option value="4909">马达加斯加</option>
+				<option value="4916">马尔代夫</option>
+				<option value="4938">马耳他</option>
+				<option value="4939">马拉维</option>
+				<option value="4943">马来西亚</option>
+				<option value="5072">马里</option>
+				<option value="5082">马其顿</option>
+				<option value="5083">马绍尔群岛</option>
+				<option value="5084">马提尼克</option>
+				<option value="5085">马约特岛</option>
+				<option value="5086">曼岛</option>
+				<option value="5087">毛里求斯</option>
+				<option value="5088">毛里塔尼亚</option>
+				<option value="5102">美国</option>
+				<option value="5437">美属萨摩亚</option>
+				<option value="5451">美属外岛</option>
+				<option value="5452">蒙古</option>
+				<option value="5475">蒙特塞拉特</option>
+				<option value="5476">孟加拉</option>
+				<option value="5480">密克罗尼西亚</option>
+				<option value="5481">秘鲁</option>
+				<option value="5511">缅甸</option>
+				<option value="5526">摩尔多瓦</option>
+				<option value="5527">摩洛哥</option>
+				<option value="5537">摩纳哥</option>
+				<option value="5538">莫桑比克</option>
+				<option value="5539">墨西哥</option>
+				<option value="5600">纳米比亚</option>
+				<option value="5614">南非</option>
+				<option value="5665">南极洲</option>
+				<option value="5666">南乔治亚和南桑德威奇群岛</option>
+				<option value="5667">瑙鲁</option>
+				<option value="5668">尼泊尔</option>
+				<option value="5683">尼加拉瓜</option>
+				<option value="5701">尼日尔</option>
+				<option value="5710">尼日利亚</option>
+				<option value="5716">纽埃</option>
+				<option value="5717">挪威</option>
+				<option value="5737">诺福克</option>
+				<option value="5738">帕劳群岛</option>
+				<option value="5739">皮特凯恩</option>
+				<option value="5740">葡萄牙</option>
+				<option value="5770">乔治亚</option>
+				<option value="5771">日本</option>
+				<option value="5819">瑞典</option>
+				<option value="5841">瑞士</option>
+				<option value="5869">萨尔瓦多</option>
+				<option value="5893">萨摩亚</option>
+				<option value="5894">塞尔维亚,黑山</option>
+				<option value="5903">塞拉利昂</option>
+				<option value="5908">塞内加尔</option>
+				<option value="5920">塞浦路斯</option>
+				<option value="5927">塞舌尔</option>
+				<option value="5928">沙特阿拉伯</option>
+				<option value="5951">圣诞岛</option>
+				<option value="5952">圣多美和普林西比</option>
+				<option value="5953">圣赫勒拿</option>
+				<option value="5954">圣基茨和尼维斯</option>
+				<option value="5955">圣卢西亚</option>
+				<option value="5956">圣马力诺</option>
+				<option value="5957">圣皮埃尔和米克隆群岛</option>
+				<option value="5958">圣文森特和格林纳丁斯</option>
+				<option value="5959">斯里兰卡</option>
+				<option value="5985">斯洛伐克</option>
+				<option value="5994">斯洛文尼亚</option>
+				<option value="6007">斯瓦尔巴和扬马廷</option>
+				<option value="6008">斯威士兰</option>
+				<option value="6009">苏丹</option>
+				<option value="6019">苏里南</option>
+				<option value="6030">所罗门群岛</option>
+				<option value="6041">索马里</option>
+				<option value="6042">塔吉克斯坦</option>
+				<option value="6058">泰国</option>
+				<option value="6133">坦桑尼亚</option>
+				<option value="6161">汤加</option>
+				<option value="6167">特克斯和凯克特斯群岛</option>
+				<option value="6168">特里斯坦达昆哈</option>
+				<option value="6169">特立尼达和多巴哥</option>
+				<option value="6170">突尼斯</option>
+				<option value="6195">图瓦卢</option>
+				<option value="6196">土耳其</option>
+				<option value="6275">土库曼斯坦</option>
+				<option value="6283">托克劳</option>
+				<option value="6284">瓦利斯和福图纳</option>
+				<option value="6285">瓦努阿图</option>
+				<option value="6292">危地马拉</option>
+				<option value="6317">维尔京群岛，美属</option>
+				<option value="6318">维尔京群岛，英属</option>
+				<option value="6319">委内瑞拉</option>
+				<option value="6344">文莱</option>
+				<option value="6345">乌干达</option>
+				<option value="6402">乌克兰</option>
+				<option value="6428">乌拉圭</option>
+				<option value="6448">乌兹别克斯坦</option>
+				<option value="6463">西班牙</option>
+				<option value="6514">希腊</option>
+				<option value="6525">新加坡</option>
+				<option value="6526">新喀里多尼亚</option>
+				<option value="6527">新西兰</option>
+				<option value="6552">匈牙利</option>
+				<option value="6573">叙利亚</option>
+				<option value="6590">牙买加</option>
+				<option value="6605">亚美尼亚</option>
+				<option value="6617">也门</option>
+				<option value="6639">伊拉克</option>
+				<option value="6640">伊朗</option>
+				<option value="6641">以色列</option>
+				<option value="6650">意大利</option>
+				<option value="6717">印度</option>
+				<option value="6748">印度尼西亚</option>
+				<option value="6777">英国</option>
+				<option value="6845">英属印度洋领地</option>
+				<option value="6846">约旦</option>
+				<option value="6860">越南</option>
+				<option value="6864">赞比亚</option>
+				<option value="6874">泽西岛</option>
+				<option value="6875">乍得</option>
+				<option value="6876">直布罗陀</option>
+				<option value="6877">智利</option>
+				<option value="6891">中非共和国</option>
+			</select>
+			<select id="state" name="state"></select>
+			<select id="city" name="city"></select>
+			<select id="region" name="region"></select>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+$.LocList({
+	// `fields`定义选择框，必须按照多级顺序定义
+	fields : ['#country', '#state', '#city', '#region'],
+	// `topLevel`定义最高级的地区类型，可以是`country`，`state`和`city`，不可以是`region`，因为`region`已经是最低级类型
+	topLevel : 'country',
+	// `url`定义ajax请求地址
+	url : 'getLoc.php',
+	// `preload`定义是否预装载数据
+	preload : true
+});
+</script>
+</body>
+</html>
