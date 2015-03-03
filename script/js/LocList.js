@@ -31,8 +31,8 @@
 			var start = types.indexOf(config.topLevel);
 			var length = config.fields.length < types.length ? config.fields.length + start : types.length;
 			
-			for (var i = start; i < length; i++) {
-				fields[types[i]] = $(config.fields[i]);
+			for (var i = start, index = 0; i < length; i++, index++) {
+				fields[types[i]] = $(config.fields[index]);
 			}
 		})();
 		
